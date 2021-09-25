@@ -19,6 +19,7 @@ from raif_hack.settings import (
     TEST_PATH,
     TRAIN_PATH,
 )
+from raif_hack.data import RemoveScarceValues
 
 
 class RaifKNNTrainDataset(Dataset):
@@ -197,6 +198,21 @@ class RaifDataModule(pl.LightningDataModule):
 
         self.cardinality = [None for f in cat_features]
         self.emb_size = [3 for f in cat_features]
+
+        self.df = None
+        self.predictions = None
+        self.train = None
+        self.val = None
+        self.test = None
+        self.remove_scarse = None
+        self.encoders = None
+        self.tabnet_preprocessor = None
+        self.knn_preprocessor = None
+        self.knn_model = None
+        self.train_dataset = None
+        self.val_dataset = None
+        self.test_dataset = None
+        self.predictions_dataset = None
 
     def prepare_data(self):
         pass

@@ -24,6 +24,7 @@ from raif_hack.settings import (
     TRAIN_PATH,
 )
 from raif_hack.torch_utils import RaifDataModule
+from raif_hack.models import SiameseSystem
 
 if __name__ == "__main__":
     dm = RaifDataModule(
@@ -37,6 +38,7 @@ if __name__ == "__main__":
         num_workers=128,
         batch_size=512,
     )
+    dm.setup()
 
     batch = next(iter(dm.train_dataloader()))
 
