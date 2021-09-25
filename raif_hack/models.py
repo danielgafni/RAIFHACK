@@ -9,6 +9,7 @@ import torch.nn as nn
 from pytorch_tabnet.tab_network import TabNet
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, Dataset, Sampler
+from raif_hack.metrics import deviation_metric
 
 
 class FaissKNearestNeighbors:
