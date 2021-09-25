@@ -17,6 +17,7 @@ from raif_hack.metrics import deviation_metric
 from raif_hack.models import FaissKNearestNeighbors
 from raif_hack.settings import (
     CATEGORICAL_LE_FEATURES,
+    SUBMISSION_PATH,
     CATEGORICAL_OHE_FEATURES,
     NUM_FEATURES,
     TARGET,
@@ -25,6 +26,7 @@ from raif_hack.settings import (
 )
 from raif_hack.torch_utils import RaifDataModule
 from raif_hack.models import SiameseSystem
+
 
 if __name__ == "__main__":
     dm = RaifDataModule(
