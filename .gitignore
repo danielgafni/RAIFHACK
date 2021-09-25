@@ -1,3 +1,5 @@
+models
+logs
 data/model-checkpoints
 data/submissions
 *.csv
